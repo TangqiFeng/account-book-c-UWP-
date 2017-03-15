@@ -1,2 +1,8 @@
-# account-book-c-UWP-
-Year 3, BSc (ord) in Software Development --- Mobile Applications Project（ Universal Windows Project）
+# account-book （c# UWP）
+
+###### Tangqi Feng
+
+##### Purpose
+This application helps user to note daily expenses, in order to provide a good way to organize their wealth.
+
+##### why will the user open this app for a second time?
