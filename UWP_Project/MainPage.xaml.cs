@@ -53,6 +53,18 @@ namespace UWP_Project
         {
 
         }
+
+        private void btnAddSubmit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAddReset_Click(object sender, RoutedEventArgs e)
+        {
+            txtDescribe.Text = "";
+            txtLocation.Text = "";
+            txtValue.Text = "";
+        }
     }
 
 }
