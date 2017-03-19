@@ -16,15 +16,15 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:ConnectionId='1' x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
-            <TextBlock x:ConnectionId='18' x:Name="tblTitle" HorizontalAlignment="Center" 
+            <TextBlock x:ConnectionId='21' x:Name="tblTitle" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
         <StackPanel x:ConnectionId='2' x:Name="spMain" Grid.Row="1" Visibility="Collapsed" Background="Azure">
-            <Button x:ConnectionId='16' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+            <Button x:ConnectionId='19' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50"                           
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
-            <Button x:ConnectionId='17' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+            <Button x:ConnectionId='20' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50" 
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
         </StackPanel>
@@ -37,8 +37,8 @@
             <TextBlock Text="type :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
             <StackPanel x:ConnectionId='8' x:Name="spChooseType" Margin="40,10,0,0">
-                <RadioButton Content="income ( + )" Tag="income" IsChecked="True"/>
-                <RadioButton Content="expenditure ( - )" Tag="expenditure"/>
+                <RadioButton x:ConnectionId='17' x:Name="radPlus" Content="income ( + )" Tag="+"                           IsChecked="True"/>
+                <RadioButton x:ConnectionId='18' x:Name="radMinus" Content="expenditure ( - )" Tag="-"                           />
             </StackPanel>
             <TextBlock Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
@@ -49,11 +49,11 @@
             <StackPanel x:ConnectionId='10' x:Name="spChooseCurrency" Orientation="Horizontal">
                 <TextBox x:ConnectionId='15' x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
                           PlaceholderText="e.g.  12.34" Height="20"></TextBox>
-                <ComboBox Margin="10,10,0,0">
-                    <ComboBoxItem Tag="EUR" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
-                    <ComboBoxItem Tag="USD" Content="$  (USD)"></ComboBoxItem>
-                    <ComboBoxItem Tag="GBP" Content="￡ (GBP)"></ComboBoxItem>
-                    <ComboBoxItem Tag="RMB" Content="¥  (RMB)"></ComboBoxItem>
+                <ComboBox x:ConnectionId='16' x:Name="cmbChooseCurrency" Margin="10,10,0,0">
+                    <ComboBoxItem Tag="EUR(€)" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Tag="USD($)" Content="$  (USD)"></ComboBoxItem>
+                    <ComboBoxItem Tag="GBP(￡)" Content="￡ (GBP)"></ComboBoxItem>
+                    <ComboBoxItem Tag="RMB(¥)" Content="¥  (RMB)"></ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 

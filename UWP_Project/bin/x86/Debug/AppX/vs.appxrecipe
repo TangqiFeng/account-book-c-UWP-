@@ -16,7 +16,7 @@
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>1458DED02BB484C1340D2993E1B6842B06BCC22656D45B7392EE0D8A43860349</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>653560CF2BFB28785DD3584FBA0ACBE1362999617D38079D62D60D9EBD6C3EED</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>3c0413de-3561-44bb-81c1-f0521e09067e_1.0.0.0_x86__g9tnk1mnk567p</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>3c0413de-3561-44bb-81c1-f0521e09067e_g9tnk1mnk567p!App</RegisteredUserModeAppID>
     <RegisteredPackageID>3c0413de-3561-44bb-81c1-f0521e09067e</RegisteredPackageID>
@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-18T17:43:41.438</Modified>
+      <Modified>2017-03-19T18:43:59.065</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
       <PackagePath>entrypoint\UWP_Project.exe</PackagePath>
-      <Modified>2017-03-18T17:43:40.336</Modified>
+      <Modified>2017-03-19T18:43:58.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -99,6 +99,14 @@
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\runtime.any.System.Private.DataContractSerialization\4.1.0\lib\netcore50\System.Private.DataContractSerialization.dll">
       <PackagePath>System.Private.DataContractSerialization.dll</PackagePath>
       <Modified>2016-02-21T21:35:48.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\SQLite.Net-PCL\3.1.1\lib\Windows8\SQLite.Net.Platform.WinRT.dll">
+      <PackagePath>SQLite.Net.Platform.WinRT.dll</PackagePath>
+      <Modified>2015-11-06T17:18:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\SQLite.Net.Core-PCL\3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll">
+      <PackagePath>SQLite.Net.dll</PackagePath>
+      <Modified>2015-11-06T17:18:40.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\System.AppContext\4.0.0\lib\netcore50\System.AppContext.dll">
       <PackagePath>System.AppContext.dll</PackagePath>
@@ -448,6 +456,10 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T22:11:12.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.17.0\Redist\Debug\x86\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+      <Modified>2017-03-19T12:09:53.802</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2017-03-18T10:05:29.701</Modified>
@@ -488,7 +500,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
       <PackagePath>UWP_Project.xr.xml</PackagePath>
-      <Modified>2017-03-18T17:43:40.134</Modified>
+      <Modified>2017-03-19T18:00:35.990</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -497,11 +509,11 @@
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-18T17:43:41.218</Modified>
+      <Modified>2017-03-19T18:43:58.870</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
       <PackagePath>UWP_Project.exe</PackagePath>
-      <Modified>2017-03-18T17:43:41.432</Modified>
+      <Modified>2017-03-19T18:43:59.060</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

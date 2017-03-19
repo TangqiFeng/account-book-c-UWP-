@@ -37,8 +37,8 @@
             <TextBlock Text="type :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
             <StackPanel x:Name="spChooseType" Margin="40,10,0,0">
-                <RadioButton Content="income ( + )" Tag="income" IsChecked="True"/>
-                <RadioButton Content="expenditure ( - )" Tag="expenditure"/>
+                <RadioButton x:Name="radPlus" Content="income ( + )" Tag="+" Checked="radPlus_Checked" IsChecked="True"/>
+                <RadioButton x:Name="radMinus" Content="expenditure ( - )" Tag="-" Checked="radMinus_Checked"/>
             </StackPanel>
             <TextBlock Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
@@ -49,11 +49,11 @@
             <StackPanel x:Name="spChooseCurrency" Orientation="Horizontal">
                 <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
                           PlaceholderText="e.g.  12.34" Height="20"></TextBox>
-                <ComboBox Margin="10,10,0,0">
-                    <ComboBoxItem Tag="EUR" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
-                    <ComboBoxItem Tag="USD" Content="$  (USD)"></ComboBoxItem>
-                    <ComboBoxItem Tag="GBP" Content="￡ (GBP)"></ComboBoxItem>
-                    <ComboBoxItem Tag="RMB" Content="¥  (RMB)"></ComboBoxItem>
+                <ComboBox x:Name="cmbChooseCurrency" Margin="10,10,0,0">
+                    <ComboBoxItem Tag="EUR(€)" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Tag="USD($)" Content="$  (USD)"></ComboBoxItem>
+                    <ComboBoxItem Tag="GBP(￡)" Content="￡ (GBP)"></ComboBoxItem>
+                    <ComboBoxItem Tag="RMB(¥)" Content="¥  (RMB)"></ComboBoxItem>
                 </ComboBox>
             </StackPanel>
             <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 

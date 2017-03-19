@@ -190,3 +190,5 @@ C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\qualifiers.txt
 C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\ProjectArchitectures.txt
+C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\SQLite.Net.Platform.WinRT.dll
+C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\SQLite.Net.dll
