@@ -30,33 +30,60 @@ namespace UWP_Project
 
         }
 
+        #region Home Page
+
+        private void btnToHomePage_Click(object sender, RoutedEventArgs e)
+        {
+            if (spSearch.Visibility == Visibility.Visible)
+            {
+                spSearch.Visibility = Visibility.Collapsed;
+            }
+            if (spAdd.Visibility == Visibility.Visible)
+            {
+                spAdd.Visibility = Visibility.Collapsed;
+            }
+            if (spMain.Visibility == Visibility.Collapsed)
+            {
+                spMain.Visibility = Visibility.Visible;
+            }
+        }
+
         private void btnToAddPage_Click(object sender, RoutedEventArgs e)
         {
             spMain.Visibility = Visibility.Collapsed;
             spAdd.Visibility = Visibility.Visible;
         }
 
-        private void btnToHomePage_Click(object sender, RoutedEventArgs e)
+        private void btnToSearchPage_Click(object sender, RoutedEventArgs e)
         {
-            for(int i = 0; i < 5; i++)
-            {
-                if(spMain.Visibility == Visibility.Collapsed)
-                {
-                    spMain.Visibility = Visibility.Visible;
-                }
-                if(spAdd.Visibility == Visibility.Visible)
-                {
-                    spAdd.Visibility = Visibility.Collapsed;
-                }
-            }
+            spMain.Visibility = Visibility.Collapsed;
+            spSearch.Visibility = Visibility.Visible;
         }
 
+        #endregion
+
+        #region add item Page
+
+        string opt;
+
+        #region Choose income / expenditure
+        private void radMinus_Checked(object sender, RoutedEventArgs e)
+        {
+            opt = radMinus.Tag.ToString();
+        }
+
+        private void radPlus_Checked(object sender, RoutedEventArgs e)
+        {
+            opt = radPlus.Tag.ToString();
+        }
+
+        #endregion
+        
         private void btnGetLocation_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        string opt;
         private async void btnAddSubmit_Click(object sender, RoutedEventArgs e)
         {
             string des = txtDescribe.Text;
@@ -67,8 +94,8 @@ namespace UWP_Project
 
             using (var conn = AppDatabase.GetDbConnection())
             {
-                var addPerson = new Item() { detail = des, operate = opt, value = value, location = loc, date = date, currency = currency};
-                
+                var addPerson = new Item() { detail = des, operate = opt, value = value, location = loc, date = date, currency = currency };
+
                 var count = conn.Insert(addPerson);
 
                 string msg = $"new item is NO. {addPerson.id}, {addPerson.detail}";
@@ -83,21 +110,48 @@ namespace UWP_Project
             txtValue.Text = "";
         }
 
-        #region Choose income / expenditure
-        private void radMinus_Checked(object sender, RoutedEventArgs e)
-        {
-            opt = radMinus.Tag.ToString();
-        }
-
-        private void radPlus_Checked(object sender, RoutedEventArgs e)
-        {
-            opt = radPlus.Tag.ToString();
-        }
         #endregion
 
-        #region Choose currency
+        #region search Page
+
+        #region Choose search type (by year/month/location)
+
+        private void radSearchByMonth_Checked(object sender, RoutedEventArgs e)
+        {
+            spChooseByYear.Visibility = Visibility.Visible;
+            spChooseByMonth.Visibility = Visibility.Visible;
+            spChooseByLocation.Visibility = Visibility.Collapsed;
+        }
+
+        private void radSearchByYear_Checked(object sender, RoutedEventArgs e)
+        {
+            spChooseByYear.Visibility = Visibility.Visible;
+            spChooseByMonth.Visibility = Visibility.Collapsed;
+            spChooseByLocation.Visibility = Visibility.Collapsed;
+        }
+
+        private void radSearchByLocation_Checked(object sender, RoutedEventArgs e)
+        {
+            spChooseByYear.Visibility = Visibility.Collapsed;
+            spChooseByMonth.Visibility = Visibility.Collapsed;
+            spChooseByLocation.Visibility = Visibility.Visible;
+        }
+
+        #endregion
+
+        private void btnSearchReset_Click(object sender, RoutedEventArgs e)
+        {
+            txtSearchYear.Text = "";
+            txtSearchMonth.Text = "";
+            txtSearchLocation.Text = "";
+        }
+
+
+
+
+        #endregion
+
         
-        #endregion
     }
 
 }

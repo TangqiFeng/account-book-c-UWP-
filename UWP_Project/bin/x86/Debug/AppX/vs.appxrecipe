@@ -28,13 +28,13 @@
     <AppXManifest Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-19T18:43:59.065</Modified>
+      <Modified>2017-03-19T21:41:41.937</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
       <PackagePath>entrypoint\UWP_Project.exe</PackagePath>
-      <Modified>2017-03-19T18:43:58.006</Modified>
+      <Modified>2017-03-19T21:41:40.966</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -500,7 +500,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
       <PackagePath>UWP_Project.xr.xml</PackagePath>
-      <Modified>2017-03-19T18:00:35.990</Modified>
+      <Modified>2017-03-19T21:10:20.585</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -509,11 +509,11 @@
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-19T18:43:58.870</Modified>
+      <Modified>2017-03-19T21:41:41.770</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
       <PackagePath>UWP_Project.exe</PackagePath>
-      <Modified>2017-03-19T18:43:59.060</Modified>
+      <Modified>2017-03-19T21:41:41.932</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

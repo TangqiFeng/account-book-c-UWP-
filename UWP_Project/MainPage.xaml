@@ -25,11 +25,11 @@
                     Width="200" Height="50" Click="btnToAddPage_Click"
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
             <Button x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
-                    Width="200" Height="50" 
-                    Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
+                    Width="200" Height="50" Click="btnToSearchPage_Click" 
+                    Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
         </StackPanel>
 
-        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
+        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Collapsed" Background="Azure">
             <TextBlock Text="ADD ITEM" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
             <TextBlock Text="date :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
@@ -70,6 +70,37 @@
                         Click="btnAddReset_Click"></Button>
             </StackPanel>
         </StackPanel>
+
+        <StackPanel x:Name="spSearch" Grid.Row="1" Visibility="Visible" Background="Azure">
+            <TextBlock Text="SEARCH" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
+            <TextBlock Text="type :" Margin="40,30,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <StackPanel x:Name="spSearchType" Margin="40,20,0,0">
+                <RadioButton x:Name="radSearchByMonth" Content="search by month" Tag="m" Checked="radSearchByMonth_Checked"/>
+                <RadioButton x:Name="radSearchByYear" Content="search by year" Tag="y" Checked="radSearchByYear_Checked"/>
+                <RadioButton x:Name="radSearchByLocation" Content="search by Location" Checked="radSearchByLocation_Checked"/>
+            </StackPanel>
+            <TextBlock Text="item :" Margin="40,20,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <StackPanel x:Name="spChooseByYear" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                <TextBlock Text="year:" FontSize="18"></TextBlock>
+                <TextBox x:Name="txtSearchYear" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
+            </StackPanel>
+            <StackPanel x:Name="spChooseByMonth" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                <TextBlock Text="month:" FontSize="18"></TextBlock>
+                <TextBox x:Name="txtSearchMonth" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
+            </StackPanel>
+            <StackPanel x:Name="spChooseByLocation" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                <TextBlock Text="location:" FontSize="18"></TextBlock>
+                <TextBox x:Name="txtSearchLocation" Margin="20,0,0,0" Width="150" HorizontalAlignment="Left" ></TextBox>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
+                <Button x:Name="btnSearchSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
+                <Button x:Name="btnSearchReset" Margin="60,0,0,0" Content="Reset" Width="80"
+                        Click="btnSearchReset_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+        
 
         <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
             <Grid Background="Beige" Height="40">
