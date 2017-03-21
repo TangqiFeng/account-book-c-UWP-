@@ -4,8 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWP_Project.services;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Services.Maps;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -27,8 +29,66 @@ namespace UWP_Project
         public MainPage()
         {
             this.InitializeComponent();
-
+            this.Loaded += MainPage_Loaded;
         }
+
+        #region MainPage_Loaded (get currentlocation)
+        Geolocator myGeo;
+        Geoposition _pos;
+        String CurrentLocation = "Loading... try again later!";
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            initialiseGeoLocation();
+        }
+        
+        private async void initialiseGeoLocation()
+        {
+            var access = await Geolocator.RequestAccessAsync();
+            switch (access)
+            {
+                case GeolocationAccessStatus.Allowed:
+                    // set some stuff up now.
+                    myGeo = new Geolocator();
+                    //myGeo.PositionChanged not needed just now.
+                    myGeo.DesiredAccuracy = PositionAccuracy.High;
+                    //Save position to currentLocation
+                    GetCurrentLocation();
+                    break;
+                case GeolocationAccessStatus.Denied:
+                case GeolocationAccessStatus.Unspecified:
+                    // ask the user for something here if things go wrong.
+                    string msg = $"Can't access location services";
+                    await new MessageDialog(msg).ShowAsync();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private async void GetCurrentLocation()
+        {
+            try
+            {
+                _pos = await myGeo.GetGeopositionAsync();
+            }
+            catch (Exception ex)
+            {
+                string msg = $"Problem reading location" + ex.Message;
+                await new MessageDialog(msg).ShowAsync();
+                return;
+            }
+            BasicGeoposition myLocation = new BasicGeoposition
+            {
+                Longitude = _pos.Coordinate.Point.Position.Longitude,
+                Latitude = _pos.Coordinate.Point.Position.Latitude
+            };
+            Geopoint pointToReverseGeocode = new Geopoint(myLocation);
+            MapLocationFinderResult result = await MapLocationFinder.FindLocationsAtAsync(pointToReverseGeocode);
+            CurrentLocation = result.Locations[0].Address.Town.ToString()
+                               + ", " + result.Locations[0].Address.Country.ToString();
+        }
+
+        #endregion
 
         #region Home Page
 
@@ -64,9 +124,10 @@ namespace UWP_Project
 
         #region add item Page
 
-        string opt;
 
         #region Choose income / expenditure
+
+        string opt;
         private void radMinus_Checked(object sender, RoutedEventArgs e)
         {
             opt = radMinus.Tag.ToString();
@@ -79,9 +140,9 @@ namespace UWP_Project
 
         #endregion
         
-        private void btnGetLocation_Click(object sender, RoutedEventArgs e)
+        private async void btnGetLocation_Click(object sender, RoutedEventArgs e)
         {
-
+            txtLocation.Text = CurrentLocation;
         }
 
         private async void btnAddSubmit_Click(object sender, RoutedEventArgs e)
@@ -146,9 +207,7 @@ namespace UWP_Project
             txtSearchLocation.Text = "";
         }
 
-
-
-
+        
         #endregion
 
         

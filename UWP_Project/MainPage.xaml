@@ -29,7 +29,7 @@
                     Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
         </StackPanel>
 
-        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Collapsed" Background="Azure">
+        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
             <TextBlock Text="ADD ITEM" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
             <TextBlock Text="date :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
@@ -59,10 +59,10 @@
             <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
             <StackPanel Orientation="Horizontal">
-            <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="180"
+            <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="190"
                      PlaceholderText="city , country" Height="20"></TextBox>
-            <Button x:Name="btnGetLocation" Content="Get Current Location" Margin="5,5,0,0"
-                    Click="btnGetLocation_Click" FontSize="13"></Button>
+            <Button x:Name="btnGetLocation" Content="Get CurrentLocation" Margin="5,5,0,0"
+                    Click="btnGetLocation_Click" FontSize="12"></Button>
             </StackPanel>
             <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
                 <Button x:Name="btnAddSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
@@ -71,7 +71,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel x:Name="spSearch" Grid.Row="1" Visibility="Visible" Background="Azure">
+        <StackPanel x:Name="spSearch" Grid.Row="1" Visibility="Collapsed" Background="Azure">
             <TextBlock Text="SEARCH" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
             <TextBlock Text="type :" Margin="40,30,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
@@ -99,6 +99,10 @@
                 <Button x:Name="btnSearchReset" Margin="60,0,0,0" Content="Reset" Width="80"
                         Click="btnSearchReset_Click"></Button>
             </StackPanel>
+        </StackPanel>
+
+        <StackPanel x:Name="spHistory" Grid.Row="1" Visibility="Collapsed" Background="Azure">
+            <TextBlock Text="HISTORY" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
         </StackPanel>
         
 
