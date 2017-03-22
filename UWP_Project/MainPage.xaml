@@ -20,7 +20,7 @@
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
-        <StackPanel x:Name="spMain" Grid.Row="1" Visibility="Collapsed" Background="Azure">
+        <StackPanel x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
             <Button x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50" Click="btnToAddPage_Click"
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
@@ -28,83 +28,6 @@
                     Width="200" Height="50" Click="btnToSearchPage_Click" 
                     Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
         </StackPanel>
-
-        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
-            <TextBlock Text="ADD ITEM" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <TextBlock Text="date :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <CalendarDatePicker x:Name="arrivalCalendarDatePicker" Margin="40,5,0,0"/>
-            <TextBlock Text="type :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spChooseType" Margin="40,10,0,0">
-                <RadioButton x:Name="radPlus" Content="income ( + )" Tag="+" Checked="radPlus_Checked" IsChecked="True"/>
-                <RadioButton x:Name="radMinus" Content="expenditure ( - )" Tag="-" Checked="radMinus_Checked"/>
-            </StackPanel>
-            <TextBlock Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <TextBox x:Name="txtDescribe" Height="50" Width="280" Margin="40,5,0,0" HorizontalAlignment="Left"
-                     PlaceholderText="details ..." TextWrapping="Wrap"></TextBox>
-            <TextBlock Text="value :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spChooseCurrency" Orientation="Horizontal">
-                <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
-                          PlaceholderText="e.g.  12.34" Height="20"></TextBox>
-                <ComboBox x:Name="cmbChooseCurrency" Margin="10,10,0,0">
-                    <ComboBoxItem Tag="EUR(€)" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
-                    <ComboBoxItem Tag="USD($)" Content="$  (USD)"></ComboBoxItem>
-                    <ComboBoxItem Tag="GBP(￡)" Content="￡ (GBP)"></ComboBoxItem>
-                    <ComboBoxItem Tag="RMB(¥)" Content="¥  (RMB)"></ComboBoxItem>
-                </ComboBox>
-            </StackPanel>
-            <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel Orientation="Horizontal">
-            <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="190"
-                     PlaceholderText="city , country" Height="20"></TextBox>
-            <Button x:Name="btnGetLocation" Content="Get CurrentLocation" Margin="5,5,0,0"
-                    Click="btnGetLocation_Click" FontSize="12"></Button>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
-                <Button x:Name="btnAddSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
-                <Button x:Name="btnAddReset" Margin="60,0,0,0" Content="Reset" Width="80"
-                        Click="btnAddReset_Click"></Button>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel x:Name="spSearch" Grid.Row="1" Visibility="Collapsed" Background="Azure">
-            <TextBlock Text="SEARCH" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <TextBlock Text="type :" Margin="40,30,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spSearchType" Margin="40,20,0,0">
-                <RadioButton x:Name="radSearchByMonth" Content="search by month" Tag="m" Checked="radSearchByMonth_Checked"/>
-                <RadioButton x:Name="radSearchByYear" Content="search by year" Tag="y" Checked="radSearchByYear_Checked"/>
-                <RadioButton x:Name="radSearchByLocation" Content="search by Location" Checked="radSearchByLocation_Checked"/>
-            </StackPanel>
-            <TextBlock Text="item :" Margin="40,20,0,0" FontSize="18" Foreground="Teal" 
-                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spChooseByYear" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="year:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchYear" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
-            </StackPanel>
-            <StackPanel x:Name="spChooseByMonth" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="month:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchMonth" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
-            </StackPanel>
-            <StackPanel x:Name="spChooseByLocation" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="location:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchLocation" Margin="20,0,0,0" Width="150" HorizontalAlignment="Left" ></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
-                <Button x:Name="btnSearchSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
-                <Button x:Name="btnSearchReset" Margin="60,0,0,0" Content="Reset" Width="80"
-                        Click="btnSearchReset_Click"></Button>
-            </StackPanel>
-        </StackPanel>
-
-        <StackPanel x:Name="spHistory" Grid.Row="1" Visibility="Collapsed" Background="Azure">
-            <TextBlock Text="HISTORY" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-        </StackPanel>
-        
 
         <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
             <Grid Background="Beige" Height="40">
@@ -120,7 +43,7 @@
                         Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
             </Grid>
         </StackPanel>
-        
+
 
     </Grid>
 </Page>

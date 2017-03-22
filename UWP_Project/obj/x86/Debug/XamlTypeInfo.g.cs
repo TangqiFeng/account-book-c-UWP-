@@ -132,15 +132,21 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[3];
-            _typeNameTable[0] = "UWP_Project.MainPage";
+            _typeNameTable = new string[6];
+            _typeNameTable[0] = "UWP_Project.AddItemPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
+            _typeNameTable[3] = "UWP_Project.MainPage";
+            _typeNameTable[4] = "UWP_Project.SearchItemPage";
+            _typeNameTable[5] = "UWP_Project.SearchResultPage";
 
-            _typeTable = new global::System.Type[3];
-            _typeTable[0] = typeof(global::UWP_Project.MainPage);
+            _typeTable = new global::System.Type[6];
+            _typeTable[0] = typeof(global::UWP_Project.AddItemPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
+            _typeTable[3] = typeof(global::UWP_Project.MainPage);
+            _typeTable[4] = typeof(global::UWP_Project.SearchItemPage);
+            _typeTable[5] = typeof(global::UWP_Project.SearchResultPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -175,7 +181,10 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_MainPage() { return new global::UWP_Project.MainPage(); }
+        private object Activate_0_AddItemPage() { return new global::UWP_Project.AddItemPage(); }
+        private object Activate_3_MainPage() { return new global::UWP_Project.MainPage(); }
+        private object Activate_4_SearchItemPage() { return new global::UWP_Project.SearchItemPage(); }
+        private object Activate_5_SearchResultPage() { return new global::UWP_Project.SearchResultPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -187,9 +196,9 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  UWP_Project.MainPage
+            case 0:   //  UWP_Project.AddItemPage
                 userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_MainPage;
+                userType.Activator = Activate_0_AddItemPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -200,6 +209,27 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
 
             case 2:   //  Windows.UI.Xaml.Controls.UserControl
                 xamlType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                break;
+
+            case 3:   //  UWP_Project.MainPage
+                userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_3_MainPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  UWP_Project.SearchItemPage
+                userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_SearchItemPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 5:   //  UWP_Project.SearchResultPage
+                userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_SearchResultPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
                 break;
             }
             return xamlType;

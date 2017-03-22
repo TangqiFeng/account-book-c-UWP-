@@ -1,0 +1,83 @@
+﻿<Page
+    x:Class="UWP_Project.AddItemPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_Project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
+            <TextBlock x:Name="tblTitle" HorizontalAlignment="Center" 
+                       VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
+        </StackPanel>
+
+        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
+            <TextBlock Text="ADD ITEM" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
+            <TextBlock Text="date :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <CalendarDatePicker x:Name="calendarDatePicker" Margin="40,5,0,0"/>
+            <TextBlock Text="type :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <StackPanel x:Name="spChooseType" Margin="40,10,0,0">
+                <RadioButton x:Name="radPlus" Content="income ( + )" Tag="+" Checked="radPlus_Checked" IsChecked="True"/>
+                <RadioButton x:Name="radMinus" Content="expenditure ( - )" Tag="-" Checked="radMinus_Checked"/>
+            </StackPanel>
+            <TextBlock Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <TextBox x:Name="txtDescribe" Height="50" Width="280" Margin="40,5,0,0" HorizontalAlignment="Left"
+                     PlaceholderText="details ..." TextWrapping="Wrap"></TextBox>
+            <TextBlock Text="value :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <StackPanel x:Name="spChooseCurrency" Orientation="Horizontal">
+                <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
+                          PlaceholderText="e.g.  12.34" Height="20"></TextBox>
+                <ComboBox x:Name="cmbChooseCurrency" Margin="10,10,0,0">
+                    <ComboBoxItem Tag="EUR(€)" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
+                    <ComboBoxItem Tag="USD($)" Content="$  (USD)"></ComboBoxItem>
+                    <ComboBoxItem Tag="GBP(￡)" Content="￡ (GBP)"></ComboBoxItem>
+                    <ComboBoxItem Tag="RMB(¥)" Content="¥  (RMB)"></ComboBoxItem>
+                </ComboBox>
+            </StackPanel>
+            <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="190"
+                     PlaceholderText="city , country" Height="20"></TextBox>
+                <Button x:Name="btnGetLocation" Content="Get Location" Margin="5,5,0,0"
+                    Click="btnGetLocation_Click" FontSize="13"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
+                <Button x:Name="btnAddSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
+                <Button x:Name="btnAddReset" Margin="60,0,0,0" Content="Reset" Width="80"
+                        Click="btnAddReset_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
+            <Grid Background="Beige" Height="40">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="btnToHomePage" Height="30" Width="100" HorizontalAlignment="Center"
+                        Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
+                        Click="btnToHomePage_Click"></Button>
+                
+                <Button x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
+                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
+            </Grid>
+        </StackPanel>
+
+    </Grid>
+</Page>
