@@ -37,11 +37,13 @@ namespace UWP_Project
 
         #region Choose search type (by year/month/location)
 
+        public string SearchType = "";
         private void radSearchByMonth_Checked(object sender, RoutedEventArgs e)
         {
             spChooseByYear.Visibility = Visibility.Visible;
             spChooseByMonth.Visibility = Visibility.Visible;
             spChooseByLocation.Visibility = Visibility.Collapsed;
+            SearchType = "month";
         }
 
         private void radSearchByYear_Checked(object sender, RoutedEventArgs e)
@@ -49,6 +51,7 @@ namespace UWP_Project
             spChooseByYear.Visibility = Visibility.Visible;
             spChooseByMonth.Visibility = Visibility.Collapsed;
             spChooseByLocation.Visibility = Visibility.Collapsed;
+            SearchType = "year";
         }
 
         private void radSearchByLocation_Checked(object sender, RoutedEventArgs e)
@@ -56,6 +59,7 @@ namespace UWP_Project
             spChooseByYear.Visibility = Visibility.Collapsed;
             spChooseByMonth.Visibility = Visibility.Collapsed;
             spChooseByLocation.Visibility = Visibility.Visible;
+            SearchType = "location";
         }
 
         #endregion
@@ -80,7 +84,7 @@ namespace UWP_Project
             String year = txtSearchYear.Text;
             String month = txtSearchMonth.Text;
             String location = txtSearchLocation.Text;
-            items = ItemList.GetItems(year, month, location);
+            items = ItemList.GetItems(year, month, location, SearchType);
             this.Frame.Navigate(typeof(SearchResultPage));
         }
         #endregion
