@@ -10,13 +10,35 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="StartState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="scrollViewer.(FrameworkElement.Height)" Value="200"/>
+                        <Setter Target="scrollViewer.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>20,10,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        
+
         <StackPanel x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
             <TextBlock x:Name="tblTitle" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
@@ -24,7 +46,7 @@
 
         <StackPanel x:Name="spHistory" Grid.Row="1" Visibility="Visible" Background="Azure">
             <TextBlock Text="HISTORY" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <ScrollViewer Width="320" Height="300" Margin="20,20,0,0" HorizontalAlignment="Left">
+            <ScrollViewer x:Name="scrollViewer" Width="320" Height="300" Margin="20,20,0,0" HorizontalAlignment="Left">
                 <GridView ItemsSource="{x:Bind items}" IsItemClickEnabled="False">
                     <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -62,8 +84,35 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </ScrollViewer>
-
+            <StackPanel x:Name="spTotal">
+                <TextBlock Text="total :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+                <StackPanel x:Name="spTotalValue" Orientation="Horizontal">
+                    <StackPanel>
+                        <TextBlock Text="EUR(€) :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+                        <TextBlock Text="USD($) :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+                        <TextBlock Text="GBP(￡) :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+                        <TextBlock Text="RMB(¥) :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBlock Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic" x:Name="resultEURO"></TextBlock>
+                        <TextBlock Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic" x:Name="resultUSD"></TextBlock>
+                        <TextBlock Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic" x:Name="resultGBP"></TextBlock>
+                        <TextBlock Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                       FontFamily="Times New Roman" FontStyle="Italic" x:Name="resultRMB"></TextBlock>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+            
         </StackPanel>
+        
 
         <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
             <Grid Background="Beige" Height="40">

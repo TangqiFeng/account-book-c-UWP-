@@ -7,6 +7,12 @@ using SQLite.Net.Attributes;
 
 namespace UWP_Project.services
 {
+    /**
+     *  This is the bean class for storing item object
+     *  Also for creating table of SQLite
+     */
+
+
     [Table("items")]
     public class Item
     {

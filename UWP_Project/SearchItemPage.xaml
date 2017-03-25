@@ -8,6 +8,48 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="StartState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="600"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="spBody.(StackPanel.Orientation)" Value="Horizontal"/>
+                        <Setter Target="spItemValue.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>50,0,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spChooseByYear.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,10,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spChooseByMonth.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,10,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spChooseByLocation.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,10,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="stackPanel.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,20,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -23,28 +65,34 @@
 
         <StackPanel x:Name="spSearch" Grid.Row="1" Visibility="Visible" Background="Azure">
             <TextBlock Text="SEARCH" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <TextBlock Text="type :" Margin="40,30,0,0" FontSize="18" Foreground="Teal" 
+            <StackPanel x:Name="spBody">
+                <StackPanel x:Name="spType">
+                    <TextBlock Text="type :" Margin="40,30,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spSearchType" Margin="40,20,0,0">
-                <RadioButton x:Name="radSearchByMonth" Content="search by month" Tag="m" Checked="radSearchByMonth_Checked"/>
-                <RadioButton x:Name="radSearchByYear" Content="search by year" Tag="y" Checked="radSearchByYear_Checked"/>
-                <RadioButton x:Name="radSearchByLocation" Content="search by Location" Checked="radSearchByLocation_Checked"/>
-            </StackPanel>
-            <TextBlock Text="item :" Margin="40,20,0,0" FontSize="18" Foreground="Teal" 
+                    <StackPanel x:Name="spSearchType" Margin="40,20,0,0">
+                        <RadioButton x:Name="radSearchByMonth" Content="search by month" Tag="m" Checked="radSearchByMonth_Checked"/>
+                        <RadioButton x:Name="radSearchByYear" Content="search by year" Tag="y" Checked="radSearchByYear_Checked"/>
+                        <RadioButton x:Name="radSearchByLocation" Content="search by Location" Checked="radSearchByLocation_Checked"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel x:Name="spItemValue">
+                    <TextBlock Text="item :" Margin="40,20,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-            <StackPanel x:Name="spChooseByYear" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="year:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchYear" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
+                    <StackPanel x:Name="spChooseByYear" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                        <TextBlock Text="year:" FontSize="18"></TextBlock>
+                        <TextBox x:Name="txtSearchYear" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
+                    </StackPanel>
+                    <StackPanel x:Name="spChooseByMonth" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                        <TextBlock Text="month:" FontSize="18"></TextBlock>
+                        <TextBox x:Name="txtSearchMonth" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
+                    </StackPanel>
+                    <StackPanel x:Name="spChooseByLocation" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
+                        <TextBlock Text="location:" FontSize="18"></TextBlock>
+                        <TextBox x:Name="txtSearchLocation" Margin="20,0,0,0" Width="150" HorizontalAlignment="Left" ></TextBox>
+                    </StackPanel>
+                </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="spChooseByMonth" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="month:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchMonth" Margin="20,0,0,0" Width="100" HorizontalAlignment="Left" ></TextBox>
-            </StackPanel>
-            <StackPanel x:Name="spChooseByLocation" Visibility="Visible" Margin="40,20,0,0" Orientation="Horizontal">
-                <TextBlock Text="location:" FontSize="18"></TextBlock>
-                <TextBox x:Name="txtSearchLocation" Margin="20,0,0,0" Width="150" HorizontalAlignment="Left" ></TextBox>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
+            <StackPanel x:Name="stackPanel" Orientation="Horizontal" Margin="40,30,0,0">
                 <Button x:Name="btnSearchSubmit" Content="Submit" Width="80" Click="btnSearchSubmit_Click"></Button>
                 <Button x:Name="btnSearchReset" Margin="60,0,0,0" Content="Reset" Width="80"
                         Click="btnSearchReset_Click"></Button>

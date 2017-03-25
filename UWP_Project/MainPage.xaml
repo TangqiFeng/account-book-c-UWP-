@@ -8,6 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="StartState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="400"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="spMain.(StackPanel.Orientation)" Value="Vertical"/>
+                        <Setter Target="spButtons.(StackPanel.Orientation)" Value="Horizontal"/>
+                        <Setter Target="btnToSearchPage.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,80,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="btnToAddPage.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,80,20,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spMain.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="spButtons.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -21,12 +51,14 @@
         </StackPanel>
 
         <StackPanel x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
-            <Button x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+            <StackPanel x:Name="spButtons">
+                <Button x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50" Click="btnToAddPage_Click"
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
-            <Button x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+                <Button x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50" Click="btnToSearchPage_Click" 
                     Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
+            </StackPanel>
         </StackPanel>
 
         <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">

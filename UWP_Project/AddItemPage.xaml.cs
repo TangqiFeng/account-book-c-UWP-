@@ -120,23 +120,33 @@ namespace UWP_Project
 
         private async void btnAddSubmit_Click(object sender, RoutedEventArgs e)
         {
-            string des = txtDescribe.Text;
-            double value = Convert.ToDouble(txtValue.Text);
-            string date = calendarDatePicker.Date.Value.Day.ToString() + "/" +
-                          calendarDatePicker.Date.Value.Month.ToString() + "/" +
-                          calendarDatePicker.Date.Value.Year.ToString();
-            string loc = txtLocation.Text;
-            string currency = ((ComboBoxItem)cmbChooseCurrency.SelectedItem).Tag.ToString();
-
-            using (var conn = AppDatabase.GetDbConnection())
+            if (string.IsNullOrWhiteSpace(txtDescribe.Text) || string.IsNullOrWhiteSpace(txtValue.Text)
+               || string.IsNullOrWhiteSpace(txtLocation.Text) || string.IsNullOrWhiteSpace(calendarDatePicker.Date.ToString()))
             {
-                var addPerson = new Item() { detail = des, operate = opt, value = value, location = loc, date = date, currency = currency };
-
-                var count = conn.Insert(addPerson);
-
-                string msg = $"new item is NO. {addPerson.id}, {addPerson.detail}";
+                string msg = $"Please Input Item Correctly!";
                 await new MessageDialog(msg).ShowAsync();
             }
+            else
+            {
+                string des = txtDescribe.Text;
+                double value = Convert.ToDouble(txtValue.Text);
+                string date = calendarDatePicker.Date.Value.Day.ToString() + "/" +
+                              calendarDatePicker.Date.Value.Month.ToString() + "/" +
+                              calendarDatePicker.Date.Value.Year.ToString();
+                string loc = txtLocation.Text;
+                string currency = ((ComboBoxItem)cmbChooseCurrency.SelectedItem).Tag.ToString();
+
+                using (var conn = AppDatabase.GetDbConnection())
+                {
+                    var addPerson = new Item() { detail = des, operate = opt, value = value, location = loc, date = date, currency = currency };
+
+                    var count = conn.Insert(addPerson);
+
+                    string msg = $"new item is NO. {addPerson.id}, {addPerson.detail}";
+                    await new MessageDialog(msg).ShowAsync();
+                }
+            }
+            
         }
 
         private void btnAddReset_Click(object sender, RoutedEventArgs e)

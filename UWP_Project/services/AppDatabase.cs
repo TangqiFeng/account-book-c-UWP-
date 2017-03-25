@@ -10,6 +10,12 @@ using Windows.Storage;
 
 namespace UWP_Project.services
 {
+    /**
+     * This class is connecting to SQLite database
+     * 
+     */
+
+
     class AppDatabase
     {
         public readonly static string DbPath = Path.Combine(ApplicationData.Current.LocalFolder.Path, "test.db");

@@ -8,6 +8,36 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='2' x:Name="StartState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="400"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+                <VisualState x:ConnectionId='3' x:Name="VisualState">
+                    <VisualState.Setters>
+                        <Setter Target="spMain.(StackPanel.Orientation)" Value="Vertical"/>
+                        <Setter Target="spButtons.(StackPanel.Orientation)" Value="Horizontal"/>
+                        <Setter Target="btnToSearchPage.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>40,80,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="btnToAddPage.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,80,20,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spMain.(FrameworkElement.HorizontalAlignment)" Value="Stretch"/>
+                        <Setter Target="spButtons.(FrameworkElement.HorizontalAlignment)" Value="Center"/>
+                    </VisualState.Setters>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="0"/>
+                    </VisualState.StateTriggers>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,31 +45,33 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:ConnectionId='1' x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
-            <TextBlock x:ConnectionId='8' x:Name="tblTitle" HorizontalAlignment="Center" 
+        <StackPanel x:ConnectionId='4' x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
+            <TextBlock x:ConnectionId='12' x:Name="tblTitle" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
-        <StackPanel x:ConnectionId='2' x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
-            <Button x:ConnectionId='6' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+        <StackPanel x:ConnectionId='5' x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
+            <StackPanel x:ConnectionId='9' x:Name="spButtons">
+                <Button x:ConnectionId='10' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50"                           
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
-            <Button x:ConnectionId='7' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+                <Button x:ConnectionId='11' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50"                               
                     Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
+            </StackPanel>
         </StackPanel>
 
-        <StackPanel x:ConnectionId='3' x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
+        <StackPanel x:ConnectionId='6' x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
             <Grid Background="Beige" Height="40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button x:ConnectionId='4' x:Name="btnToHomePage" Height="30" Width="100" HorizontalAlignment="Center"
+                <Button x:ConnectionId='7' x:Name="btnToHomePage" Height="30" Width="100" HorizontalAlignment="Center"
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
                                                    ></Button>
-                <Button x:ConnectionId='5' x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
+                <Button x:ConnectionId='8' x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
                         Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
             </Grid>
         </StackPanel>

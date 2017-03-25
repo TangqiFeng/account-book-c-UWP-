@@ -6,10 +6,19 @@ using System.Threading.Tasks;
 
 namespace UWP_Project.services
 {
+    /**
+     *  This Class handling quering items from SQLite database 
+     *  with different conditions (e.g. search by year/month/location)
+     *  need to look at the layout and state management
+     */
+
+
     class ItemList
     {
-        private static object result;
+        private static object result;//Store dynamic Searched result, for update GridView
 
+        // Tow GetItems methods. one with parameters to renew the result. 
+        //                       another with no parameter to get latest esult
         public static List<Item> GetItems(string year, string month, string location, string searchType)
         {
             // binding the SearchHistory page's gridview
@@ -70,6 +79,14 @@ namespace UWP_Project.services
                         });
                     }
                 }
+                else
+                {
+                    items.Add(new Item
+                    {
+                        detail = "ERROR ! Please Type correct search condition!"
+                    });
+                }
+                
 
 
             }
@@ -77,6 +94,7 @@ namespace UWP_Project.services
             return items;
         }
 
+        //return latest result
         public static List<Item> GetItems()
         {
             return (List<Item>)result;

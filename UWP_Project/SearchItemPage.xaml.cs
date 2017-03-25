@@ -36,6 +36,7 @@ namespace UWP_Project
         #region search Page
 
         #region Choose search type (by year/month/location)
+        //Three search conditions handler
 
         public string SearchType = "";
         private void radSearchByMonth_Checked(object sender, RoutedEventArgs e)
@@ -71,7 +72,7 @@ namespace UWP_Project
             txtSearchLocation.Text = "";
         }
 
-        List<Item> items;
+        List<Item> items;// store the dynamic quering result for binding data of GridView
         private void btnSearchSubmit_Click(object sender, RoutedEventArgs e)
         {
             this.InitializeComponent();
