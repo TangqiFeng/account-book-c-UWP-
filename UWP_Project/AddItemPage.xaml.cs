@@ -91,9 +91,18 @@ namespace UWP_Project
         #endregion
         private void btnToHomePage_Click(object sender, RoutedEventArgs e)
         {
+            using (var conn = AppDatabase.GetDbConnection())
+            {
+                conn.Execute("UPDATE Psd SET status = ? Where Id = ?", "Logined", 1);
+                
+            }
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private void btnToSetPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ChangePsdPage));
+        }
 
         #region add item Page
 
@@ -146,7 +155,10 @@ namespace UWP_Project
                     await new MessageDialog(msg).ShowAsync();
                 }
             }
-            
+            txtDescribe.Text = "";
+            txtLocation.Text = "";
+            txtValue.Text = "";
+
         }
 
         private void btnAddReset_Click(object sender, RoutedEventArgs e)
@@ -157,5 +169,7 @@ namespace UWP_Project
         }
 
         #endregion
+
+        
     }
 }

@@ -111,7 +111,8 @@
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
                                                    ></Button>
                 <Button x:ConnectionId='8' x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
-                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
+                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"
+                                                  ></Button>
             </Grid>
         </StackPanel>
 

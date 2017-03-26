@@ -58,6 +58,7 @@
       <RootProperty Name="Visibility" />
       <RootProperty Name="Orientation" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
@@ -84,6 +85,7 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Inlines" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -112,6 +114,14 @@
       <RootEvent Name="Checked" />
     </RootType>
     <RootType FullName="UWP_Project.AddItemPage" />
+    <RootType FullName="Windows.UI.Xaml.Controls.PasswordBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="PlaceholderText" />
+      <RootProperty Name="Height" />
+    </RootType>
+    <RootType FullName="UWP_Project.ChangePsdPage" />
     <RootType FullName="UWP_Project.MainPage" />
     <RootType FullName="UWP_Project.SearchItemPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">

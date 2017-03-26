@@ -207,3 +207,8 @@ C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\AddItemPage.xbf
 C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\SearchItemPage.xbf
 C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\AddItemPage.xbf
 C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\SearchItemPage.xbf
+C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\ChangePsdPage.xbf
+C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\ChangePsdPage.g.i.cs
+C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\ChangePsdPage.g.cs
+C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\ChangePsdPage.xaml
+C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\ChangePsdPage.xbf

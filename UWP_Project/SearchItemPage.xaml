@@ -111,7 +111,8 @@
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
                         Click="btnToHomePage_Click"></Button>
                 <Button x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
-                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
+                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"
+                        Click="btnToSetPage_Click"></Button>
             </Grid>
         </StackPanel>
 

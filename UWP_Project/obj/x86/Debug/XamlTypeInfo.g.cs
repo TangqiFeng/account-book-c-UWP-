@@ -132,21 +132,23 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[6];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "UWP_Project.AddItemPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "UWP_Project.MainPage";
-            _typeNameTable[4] = "UWP_Project.SearchItemPage";
-            _typeNameTable[5] = "UWP_Project.SearchResultPage";
+            _typeNameTable[3] = "UWP_Project.ChangePsdPage";
+            _typeNameTable[4] = "UWP_Project.MainPage";
+            _typeNameTable[5] = "UWP_Project.SearchItemPage";
+            _typeNameTable[6] = "UWP_Project.SearchResultPage";
 
-            _typeTable = new global::System.Type[6];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::UWP_Project.AddItemPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::UWP_Project.MainPage);
-            _typeTable[4] = typeof(global::UWP_Project.SearchItemPage);
-            _typeTable[5] = typeof(global::UWP_Project.SearchResultPage);
+            _typeTable[3] = typeof(global::UWP_Project.ChangePsdPage);
+            _typeTable[4] = typeof(global::UWP_Project.MainPage);
+            _typeTable[5] = typeof(global::UWP_Project.SearchItemPage);
+            _typeTable[6] = typeof(global::UWP_Project.SearchResultPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -182,9 +184,10 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
         }
 
         private object Activate_0_AddItemPage() { return new global::UWP_Project.AddItemPage(); }
-        private object Activate_3_MainPage() { return new global::UWP_Project.MainPage(); }
-        private object Activate_4_SearchItemPage() { return new global::UWP_Project.SearchItemPage(); }
-        private object Activate_5_SearchResultPage() { return new global::UWP_Project.SearchResultPage(); }
+        private object Activate_3_ChangePsdPage() { return new global::UWP_Project.ChangePsdPage(); }
+        private object Activate_4_MainPage() { return new global::UWP_Project.MainPage(); }
+        private object Activate_5_SearchItemPage() { return new global::UWP_Project.SearchItemPage(); }
+        private object Activate_6_SearchResultPage() { return new global::UWP_Project.SearchResultPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -211,23 +214,30 @@ namespace UWP_Project.UWP_Project_XamlTypeInfo
                 xamlType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  UWP_Project.MainPage
+            case 3:   //  UWP_Project.ChangePsdPage
                 userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_ChangePsdPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  UWP_Project.SearchItemPage
+            case 4:   //  UWP_Project.MainPage
                 userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_SearchItemPage;
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  UWP_Project.SearchResultPage
+            case 5:   //  UWP_Project.SearchItemPage
                 userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_SearchResultPage;
+                userType.Activator = Activate_5_SearchItemPage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 6:   //  UWP_Project.SearchResultPage
+                userType = new global::UWP_Project.UWP_Project_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_SearchResultPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

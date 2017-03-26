@@ -9,13 +9,13 @@
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="StartState">
+            <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='2' x:Name="StartState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowHeight="600"/>
                     </VisualState.StateTriggers>
                 </VisualState>
-                <VisualState x:Name="VisualState">
+                <VisualState x:ConnectionId='3' x:Name="VisualState">
                     <VisualState.Setters>
                         <Setter Target="DateAndType.(StackPanel.Orientation)" Value="Horizontal"/>
                         <Setter Target="txtDescribe.(FrameworkElement.Width)" Value="207"/>
@@ -82,38 +82,38 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <StackPanel x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
-            <TextBlock x:Name="tblTitle" HorizontalAlignment="Center" 
+        <StackPanel x:ConnectionId='4' x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
+            <TextBlock x:ConnectionId='29' x:Name="tblTitle" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
-        <StackPanel x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
+        <StackPanel x:ConnectionId='5' x:Name="spAdd" Grid.Row="1" Visibility="Visible" Background="Azure">
             <TextBlock Text="ADD ITEM" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <StackPanel x:Name="DateAndType">
+            <StackPanel x:ConnectionId='9' x:Name="DateAndType">
                 <TextBlock Text="date :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-                <CalendarDatePicker x:Name="calendarDatePicker" Margin="40,5,0,0"/>
+                <CalendarDatePicker x:ConnectionId='25' x:Name="calendarDatePicker" Margin="40,5,0,0"/>
                 <TextBlock Text="type :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-                <StackPanel x:Name="spChooseType" Margin="40,10,0,0">
-                    <RadioButton x:Name="radPlus" Content="income ( + )" Tag="+" Checked="radPlus_Checked" IsChecked="True"/>
-                    <RadioButton x:Name="radMinus" Content="expenditure ( - )" Tag="-" Checked="radMinus_Checked"/>
+                <StackPanel x:ConnectionId='26' x:Name="spChooseType" Margin="40,10,0,0">
+                    <RadioButton x:ConnectionId='27' x:Name="radPlus" Content="income ( + )" Tag="+"                           IsChecked="True"/>
+                    <RadioButton x:ConnectionId='28' x:Name="radMinus" Content="expenditure ( - )" Tag="-"                           />
                 </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="spDescriptionAndValue">
-                <StackPanel x:Name="spDesc">
-                    <TextBlock x:Name="textBlock1" Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+            <StackPanel x:ConnectionId='10' x:Name="spDescriptionAndValue">
+                <StackPanel x:ConnectionId='17' x:Name="spDesc">
+                    <TextBlock x:ConnectionId='23' x:Name="textBlock1" Text="describtion :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-                    <TextBox x:Name="txtDescribe" Height="50" Width="280" Margin="40,5,0,0" HorizontalAlignment="Left"
+                    <TextBox x:ConnectionId='24' x:Name="txtDescribe" Height="50" Width="280" Margin="40,5,0,0" HorizontalAlignment="Left"
                      PlaceholderText="details ..." TextWrapping="Wrap"></TextBox>
                 </StackPanel>
-                <StackPanel x:Name="spTypeValue">
-                    <TextBlock x:Name="textBlock" Text="value :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
+                <StackPanel x:ConnectionId='18' x:Name="spTypeValue">
+                    <TextBlock x:ConnectionId='19' x:Name="textBlock" Text="value :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-                    <StackPanel x:Name="spChooseCurrency" Orientation="Horizontal">
-                        <TextBox x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
+                    <StackPanel x:ConnectionId='20' x:Name="spChooseCurrency" Orientation="Horizontal">
+                        <TextBox x:ConnectionId='21' x:Name="txtValue" HorizontalAlignment="Left" Margin="40,10,0,0" Width="180"
                           PlaceholderText="e.g.  12.34" Height="20"></TextBox>
-                        <ComboBox x:Name="cmbChooseCurrency" Margin="10,10,0,0">
+                        <ComboBox x:ConnectionId='22' x:Name="cmbChooseCurrency" Margin="10,10,0,0">
                             <ComboBoxItem Tag="EUR(€)" Content="€  (EUR)" IsSelected="True"></ComboBoxItem>
                             <ComboBoxItem Tag="USD($)" Content="$  (USD)"></ComboBoxItem>
                             <ComboBoxItem Tag="GBP(￡)" Content="￡ (GBP)"></ComboBoxItem>
@@ -122,42 +122,43 @@
                     </StackPanel>
                 </StackPanel>
             </StackPanel>
-            <StackPanel x:Name="spLocationAndSubmit">
-                <StackPanel x:Name="spLocation">
+            <StackPanel x:ConnectionId='11' x:Name="spLocationAndSubmit">
+                <StackPanel x:ConnectionId='12' x:Name="spLocation">
                     <TextBlock Text="location :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
                     <StackPanel Orientation="Horizontal">
-                        <TextBox x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="190"
+                        <TextBox x:ConnectionId='15' x:Name="txtLocation" HorizontalAlignment="Left" Margin="40,5,0,0" Width="190"
                      PlaceholderText="city , country" Height="20"></TextBox>
-                        <Button x:Name="btnGetLocation" Content="Get Location" Margin="5,5,0,0"
-                    Click="btnGetLocation_Click" FontSize="13"></Button>
+                        <Button x:ConnectionId='16' x:Name="btnGetLocation" Content="Get Location" Margin="5,5,0,0"
+                                                 FontSize="13"></Button>
                     </StackPanel>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="40,30,0,0">
-                    <Button x:Name="btnAddSubmit" Content="Submit" Width="80" Click="btnAddSubmit_Click"></Button>
-                    <Button x:Name="btnAddReset" Margin="60,0,0,0" Content="Reset" Width="80"
-                        Click="btnAddReset_Click"></Button>
+                    <Button x:ConnectionId='13' x:Name="btnAddSubmit" Content="Submit" Width="80"                           ></Button>
+                    <Button x:ConnectionId='14' x:Name="btnAddReset" Margin="60,0,0,0" Content="Reset" Width="80"
+                                                 ></Button>
                 </StackPanel>
             </StackPanel>
         </StackPanel>
 
 
-        <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
+        <StackPanel x:ConnectionId='6' x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
             <Grid Background="Beige" Height="40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
 
-                <Button x:Name="btnToHomePage" Height="30" Width="100" HorizontalAlignment="Center"
+                <Button x:ConnectionId='7' x:Name="btnToHomePage" Height="30" Width="100" HorizontalAlignment="Center"
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
-                        Click="btnToHomePage_Click"></Button>
+                                                   ></Button>
 
-                <Button x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
+                <Button x:ConnectionId='8' x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
                         Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"
-                        Click="btnToSetPage_Click"></Button>
+                                                  ></Button>
             </Grid>
         </StackPanel>
 
     </Grid>
 </Page>
+

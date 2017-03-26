@@ -30,7 +30,17 @@ namespace UWP_Project
 
         private void btnToHomePage_Click(object sender, RoutedEventArgs e)
         {
+            using (var conn = AppDatabase.GetDbConnection())
+            {
+                conn.Execute("UPDATE Psd SET status = ? Where Id = ?", "Logined", 1);
+
+            }
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void btnToSetPage_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(ChangePsdPage));
         }
 
         #region search Page
@@ -89,6 +99,8 @@ namespace UWP_Project
             this.Frame.Navigate(typeof(SearchResultPage));
         }
         #endregion
+
+        
     }
 
 }

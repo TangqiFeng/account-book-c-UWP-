@@ -46,22 +46,33 @@
         </Grid.RowDefinitions>
 
         <StackPanel x:ConnectionId='4' x:Name="spHeader" VerticalAlignment="Top" Height="Auto" Background="LightGreen" Grid.Row="0">
-            <TextBlock x:ConnectionId='12' x:Name="tblTitle" HorizontalAlignment="Center" 
+            <TextBlock x:ConnectionId='15' x:Name="tblTitle" HorizontalAlignment="Center" 
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
         <StackPanel x:ConnectionId='5' x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
-            <StackPanel x:ConnectionId='9' x:Name="spButtons">
-                <Button x:ConnectionId='10' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+            <StackPanel x:ConnectionId='9' x:Name="spInputPassword">
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible">
+                    <TextBlock Foreground="Orange">Please tyoe password to continue.</TextBlock>
+                    <TextBlock Foreground="Orange">(default Password:0000)</TextBlock>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <TextBox x:ConnectionId='13' x:Name="txtPassword" Width="150" Margin="0,40,0,0" PlaceholderText="password"></TextBox>
+                    <Button x:ConnectionId='14' Content="Submit" Margin="0,20,0,0" Width="150" Height="30"                     />
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel x:ConnectionId='10' x:Name="spButtons" Visibility="Collapsed">
+                <Button x:ConnectionId='11' x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50"                           
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
-                <Button x:ConnectionId='11' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
+                <Button x:ConnectionId='12' x:Name="btnToSearchPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50"                               
                     Margin="0,80,0,0" Content="Search" FontSize="30" FontStyle="Italic"></Button>
             </StackPanel>
         </StackPanel>
 
-        <StackPanel x:ConnectionId='6' x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
+        <StackPanel x:ConnectionId='6' x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2" Visibility="Collapsed">
             <Grid Background="Beige" Height="40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -72,7 +83,8 @@
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
                                                    ></Button>
                 <Button x:ConnectionId='8' x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
-                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
+                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"
+                                                  ></Button>
             </Grid>
         </StackPanel>
 

@@ -51,7 +51,18 @@
         </StackPanel>
 
         <StackPanel x:Name="spMain" Grid.Row="1" Visibility="Visible" Background="Azure">
-            <StackPanel x:Name="spButtons">
+            <StackPanel x:Name="spInputPassword">
+                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible">
+                    <TextBlock Foreground="Orange">Please tyoe password to continue.</TextBlock>
+                    <TextBlock Foreground="Orange">(default Password:0000)</TextBlock>
+                </StackPanel>
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Center">
+                    <TextBox x:Name="txtPassword" Width="150" Margin="0,40,0,0" PlaceholderText="password"></TextBox>
+                    <Button Content="Submit" Margin="0,20,0,0" Width="150" Height="30" Click="Button_Click"/>
+                </StackPanel>
+            </StackPanel>
+            
+            <StackPanel x:Name="spButtons" Visibility="Collapsed">
                 <Button x:Name="btnToAddPage" HorizontalAlignment="Center" VerticalAlignment="Top"
                     Width="200" Height="50" Click="btnToAddPage_Click"
                     Margin="0,80,0,0" Content="Add Items" FontSize="30" FontStyle="Italic"></Button>
@@ -61,7 +72,7 @@
             </StackPanel>
         </StackPanel>
 
-        <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2">
+        <StackPanel x:Name="spFoot" VerticalAlignment="Bottom" Grid.Row="2" Visibility="Collapsed">
             <Grid Background="Beige" Height="40">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -72,7 +83,8 @@
                         Grid.Column="0" BorderThickness="0" Background="LightYellow" Content="HOME"
                         Click="btnToHomePage_Click"></Button>
                 <Button x:Name="btnToSetPage" Height="30" Width="100" HorizontalAlignment="Center" 
-                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"></Button>
+                        Grid.Column="1" BorderThickness="0" Background="LightYellow" Content="SETTING"
+                        Click="btnToSetPage_Click"></Button>
             </Grid>
         </StackPanel>
 
