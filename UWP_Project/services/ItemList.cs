@@ -99,6 +99,16 @@ namespace UWP_Project.services
         {
             return (List<Item>)result;
         }
+
+        public static void deleteItem(String detail)
+        {
+            using (var conn = AppDatabase.GetDbConnection())
+            {
+                conn.Execute("DELETE FROM items Where detail = ?", detail);
+                
+            }
+        }
+
     }
         
 }

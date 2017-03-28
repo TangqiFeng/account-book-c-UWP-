@@ -151,7 +151,7 @@ namespace UWP_Project
 
                     var count = conn.Insert(addPerson);
 
-                    string msg = $"new item is NO. {addPerson.id}, {addPerson.detail}";
+                    string msg = $"item :{addPerson.detail}  added!";
                     await new MessageDialog(msg).ShowAsync();
                 }
             }

@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using UWP_Project.services;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -28,7 +30,25 @@ namespace UWP_Project
             this.InitializeComponent();
         }
 
-        List<Item> items = ItemList.GetItems();
+        public List<Item> items = ItemList.GetItems();
+
+        
+        //text "delete" tapped 
+        private async void TextBlock_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            //get current selected item
+            Item selection = (Item)grvSelectItem.SelectedItem;
+            string itemName = selection.detail;
+            //indicate delete function (delete from database)
+            items.Remove(selection);
+            ItemList.deleteItem(itemName);
+            string msg = $"Item: "+itemName+"  deleted !";
+            await new MessageDialog(msg).ShowAsync();
+            //reload page
+            this.Frame.Navigate(typeof(SearchResultPage));
+        }
+
+
 
         private void btnToHomePage_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +64,5 @@ namespace UWP_Project
         {
             this.Frame.Navigate(typeof(ChangePsdPage));
         }
-
     }
 }
