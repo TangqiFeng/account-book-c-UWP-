@@ -89,6 +89,7 @@ namespace UWP_Project
         }
 
         #endregion
+
         private void btnToHomePage_Click(object sender, RoutedEventArgs e)
         {
             using (var conn = AppDatabase.GetDbConnection())

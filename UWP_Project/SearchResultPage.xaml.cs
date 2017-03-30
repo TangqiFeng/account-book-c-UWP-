@@ -30,6 +30,7 @@ namespace UWP_Project
             this.InitializeComponent();
         }
 
+        // binding data
         public List<Item> items = ItemList.GetItems();
 
         
@@ -63,6 +64,74 @@ namespace UWP_Project
         private void btnToSetPage_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ChangePsdPage));
+        }
+
+        private void txtCalculate_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            int length = items.Count;
+            double sumEURO = 0;
+            double sumUSD = 0;
+            double sumGBP = 0;
+            double sumRMB = 0;
+
+
+            for (int i=0; i<length; i++)
+            {
+                string curr = items[i].currency;
+                double value = items[i].value;
+                string operate = items[i].operate;
+                if (curr.Equals("EUR(€)"))
+                {
+                    if (operate.Equals("+"))
+                    {
+                        sumEURO += value;
+                    }
+                    if (operate.Equals("-"))
+                    {
+                        sumEURO -= value;
+                    }
+                }
+                if (curr.Equals("USD($)"))
+                {
+                    if (operate.Equals("+"))
+                    {
+                        sumEURO += value;
+                    }
+                    if (operate.Equals("-"))
+                    {
+                        sumEURO -= value;
+                    }
+                }
+                if (curr.Equals("GBP(￡)"))
+                {
+                    if (operate.Equals("+"))
+                    {
+                        sumGBP += value;
+                    }
+                    if (operate.Equals("-"))
+                    {
+                        sumGBP -= value;
+                    }
+                }
+                if (curr.Equals("RMB(¥)"))
+                {
+                    if (operate.Equals("+"))
+                    {
+                        sumRMB += value;
+                    }
+                    if (operate.Equals("-"))
+                    {
+                        sumRMB -= value;
+                    }
+                }
+            }
+
+
+            resultEURO.Text = sumEURO + "";
+            resultGBP.Text = sumGBP + "";
+            resultRMB.Text = sumRMB + "";
+            resultUSD.Text = sumUSD + "";
+
         }
     }
 }

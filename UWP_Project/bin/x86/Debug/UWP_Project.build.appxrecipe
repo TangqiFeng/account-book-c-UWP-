@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>3c0413de-3561-44bb-81c1-f0521e09067e</PackageIdentityName>
-    <PackageIdentityPublisher>CN=kyle</PackageIdentityPublisher>
+    <PackageIdentityPublisher>CN=C79AC649-0488-4306-925E-3BB2EBB1BEF2</PackageIdentityPublisher>
     <IntermediateOutputPath>C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
@@ -343,11 +343,8 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.17.0\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\LockScreenLogo.scale-200.png">
-      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale.png">
+      <PackagePath>Assets\SplashScreen.scale.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
@@ -372,6 +369,9 @@
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
       <PackagePath>UWP_Project.xr.xml</PackagePath>

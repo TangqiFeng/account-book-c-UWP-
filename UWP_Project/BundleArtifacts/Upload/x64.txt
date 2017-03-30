@@ -1,0 +1,2 @@
+MainPackage=C:\Labs\App\UWP_Project\UWP_Project\bin\x64\Release\Upload\UWP_Project_1.1.10.0_x64.appx
+SymbolPackage=C:\Labs\App\UWP_Project\UWP_Project\AppPackages\UWP_Project_1.1.10.0\UWP_Project_1.1.10.0_x64.appxsym

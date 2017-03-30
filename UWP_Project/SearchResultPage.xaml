@@ -14,7 +14,7 @@
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="StartState">
                     <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="600"/>
+                        <AdaptiveTrigger MinWindowHeight="650"/>
                     </VisualState.StateTriggers>
                 </VisualState>
                 <VisualState x:Name="VisualState">
@@ -23,6 +23,12 @@
                         <Setter Target="scrollViewer.(FrameworkElement.Margin)">
                             <Setter.Value>
                                 <Thickness>20,10,0,0</Thickness>
+                            </Setter.Value>
+                        </Setter>
+                        <Setter Target="spHistory.(StackPanel.Orientation)" Value="Horizontal"/>
+                        <Setter Target="spTotal.(FrameworkElement.Margin)">
+                            <Setter.Value>
+                                <Thickness>0,70,0,0</Thickness>
                             </Setter.Value>
                         </Setter>
                     </VisualState.Setters>
@@ -44,9 +50,10 @@
                        VerticalAlignment="Center" FontSize="40" Text="Account Book"></TextBlock>
         </StackPanel>
 
-        <StackPanel x:Name="spHistory" Grid.Row="1" Visibility="Visible" Background="Azure">
+        <StackPanel x:Name="spHistory" Grid.Row="1" Visibility="Visible" Background="Azure" Orientation="Vertical">
+            <StackPanel>
             <TextBlock Text="HISTORY" FontSize="25" FontStyle="Italic" Margin="10,10,0,0"></TextBlock>
-            <ScrollViewer x:Name="scrollViewer" Width="350" Height="300" Margin="20,20,0,0" HorizontalAlignment="Left">
+                <ScrollViewer x:Name="scrollViewer" Width="350" Height="300" Margin="20,20,0,0" HorizontalAlignment="Left">
                 <GridView ItemsSource="{x:Bind items, Mode=OneWay}" IsItemClickEnabled="True" x:Name="grvSelectItem">
                     <GridView.ItemsPanel>
                         <ItemsPanelTemplate>
@@ -87,12 +94,13 @@
                     </GridView.ItemTemplate>
                 </GridView>
             </ScrollViewer>
-            <StackPanel x:Name="spTotal" Visibility="Collapsed">
+            </StackPanel>
+            <StackPanel x:Name="spTotal" Visibility="Visible" Margin="0,15,0,0">
                 <StackPanel Orientation="Horizontal">
                     <TextBlock Text="total :" Margin="40,10,0,0" FontSize="18" Foreground="Teal" 
                        FontFamily="Times New Roman" FontStyle="Italic"></TextBlock>
-                    <TextBlock Text="calculate" Margin="40,10,0,0" FontSize="18" Foreground="Orange" 
-                       FontFamily="Times New Roman" FontStyle="Italic" ></TextBlock>
+                    <TextBlock x:Name="txtCalculate" Text="calculate" Margin="40,10,0,0" FontSize="18" Foreground="Orange" 
+                       FontFamily="Times New Roman" Tapped="txtCalculate_Tapped" FontStyle="Italic" ></TextBlock>
                 </StackPanel>
                 <StackPanel x:Name="spTotalValue" Orientation="Horizontal">
                     <StackPanel>
