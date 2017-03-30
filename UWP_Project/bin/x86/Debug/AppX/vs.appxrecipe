@@ -8,33 +8,33 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>3c0413de-3561-44bb-81c1-f0521e09067e</PackageIdentityName>
-    <PackageIdentityPublisher>CN=C79AC649-0488-4306-925E-3BB2EBB1BEF2</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityName>25b9d9ec-2f0d-4116-aa48-bbfb069bdfdf</PackageIdentityName>
+    <PackageIdentityPublisher>CN=kyle</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\UWP_Project\UWP_Project\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType>
     </RemoteDeploymentType>
     <PackageRegistrationPath>
     </PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
-    <RegisteredManifestChecksum>79A5012ABD1BF3CC23C59CB52B77FDFDF2DF105F4D1DFC602D4294C7F44F6655</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>19903KyleFeng.Account-Book_1.1.10.0_x86__8vqev0ger8pzt</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>19903KyleFeng.Account-Book_8vqev0ger8pzt!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>19903KyleFeng.Account-Book</RegisteredPackageID>
-    <RegisteredPackagePublisher>CN=C79AC649-0488-4306-925E-3BB2EBB1BEF2</RegisteredPackagePublisher>
-    <RegisteredVersion>1.1.10.0</RegisteredVersion>
+    <RegisteredManifestChecksum>E558384A682097257C049CB5444A3BA0590B08A7D2B7E229D2472E105A3A31D7</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>25b9d9ec-2f0d-4116-aa48-bbfb069bdfdf_1.0.0.0_x86__g9tnk1mnk567p</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>25b9d9ec-2f0d-4116-aa48-bbfb069bdfdf_g9tnk1mnk567p!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>25b9d9ec-2f0d-4116-aa48-bbfb069bdfdf</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=kyle</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-30T14:36:18.266</Modified>
+      <Modified>2017-03-30T16:57:08.915</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
       <PackagePath>entrypoint\UWP_Project.exe</PackagePath>
-      <Modified>2017-03-30T14:18:43.823</Modified>
+      <Modified>2017-03-30T16:57:07.555</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -460,60 +460,60 @@
       <PackagePath>sqlite3.dll</PackagePath>
       <Modified>2017-03-19T12:09:53.802</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale.png">
-      <PackagePath>Assets\SplashScreen.scale.png</PackagePath>
-      <Modified>2017-03-28T23:52:17.295</Modified>
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
+      <Modified>2017-03-30T16:44:15.815</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2015-09-20T17:30:08.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:46:08.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:52:30.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:53:23.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:53:41.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:53:59.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-29T00:53:00.000</Modified>
+      <Modified>2015-09-20T17:30:08.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-      <Modified>2017-03-18T10:05:29.701</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
       <PackagePath>UWP_Project.xr.xml</PackagePath>
-      <Modified>2017-03-28T21:16:25.725</Modified>
+      <Modified>2017-03-30T16:57:07.214</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2017-02-19T00:23:10.531</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2017-03-30T14:36:18.031</Modified>
+      <Modified>2017-03-30T16:57:08.704</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
       <PackagePath>UWP_Project.exe</PackagePath>
-      <Modified>2017-03-30T14:36:18.250</Modified>
+      <Modified>2017-03-30T16:57:08.903</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

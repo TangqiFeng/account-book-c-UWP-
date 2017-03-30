@@ -8,21 +8,21 @@
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>3c0413de-3561-44bb-81c1-f0521e09067e</PackageIdentityName>
-    <PackageIdentityPublisher>CN=C79AC649-0488-4306-925E-3BB2EBB1BEF2</PackageIdentityPublisher>
-    <IntermediateOutputPath>C:\Labs\App\UWP_Project\UWP_Project\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityName>25b9d9ec-2f0d-4116-aa48-bbfb069bdfdf</PackageIdentityName>
+    <PackageIdentityPublisher>CN=kyle</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\UWP_Project\UWP_Project\obj\x86\Debug\</IntermediateOutputPath>
     <RemoteDeploymentType></RemoteDeploymentType>
     <PackageRegistrationPath></PackageRegistrationPath>
     <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.exe">
       <PackagePath>entrypoint\UWP_Project.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\kyle\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
@@ -343,47 +343,47 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UAP\v0.8.0.0\ExtensionSDKs\SQLite.UWP.2015\3.17.0\Redist\Debug\x86\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale.png">
-      <PackagePath>Assets\SplashScreen.scale.png</PackagePath>
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Properties\Default.rd.xml">
+      <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\Properties\Default.rd.xml">
-      <PackagePath>Properties\Default.rd.xml</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\UWP_Project.xr.xml">
       <PackagePath>UWP_Project.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Labs\App\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
+    <AppxPackagedFile Include="C:\UWP_Project\UWP_Project\bin\x86\Debug\Core\UWP_Project.exe">
       <PackagePath>UWP_Project.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

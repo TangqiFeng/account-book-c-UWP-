@@ -1,1 +1,0 @@
-C:\Labs\App\UWP_Project\UWP_Project\UWP_Project.csproj;x86
