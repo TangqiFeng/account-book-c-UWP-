@@ -95,11 +95,11 @@ namespace UWP_Project
                 {
                     if (operate.Equals("+"))
                     {
-                        sumEURO += value;
+                        sumUSD += value;
                     }
                     if (operate.Equals("-"))
                     {
-                        sumEURO -= value;
+                        sumUSD -= value;
                     }
                 }
                 if (curr.Equals("GBP(￡)"))
