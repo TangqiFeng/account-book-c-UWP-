@@ -40,7 +40,7 @@ Users could note items, and get previous records very easily.
 - References -- "SQlite.Net-PCL", all option and bean classes are included in folder "services".
 
 ## Feature demo video 
-- [link](https://youtu.be/SDttFqB1i74)
+- [link](https://youtu.be/BGLDO7QsZy0)
 
 ## Conclusion
 This app is very easy for operating, with good security, you deserve to have it!
